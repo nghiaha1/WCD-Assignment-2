@@ -75,7 +75,7 @@
                         <li class="nav-item">
                             <a href="/admin/products/list" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List Faculty</p>
+                                <p>List Product</p>
                             </a>
                         </li>
                     </ul>
