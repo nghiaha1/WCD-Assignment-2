@@ -2,6 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Category obj = (Category) request.getAttribute("obj");
+    if (obj == null) {
+        obj = new Category();
+    }
 %>
 <jsp:include page="/admin/includes/head.jsp"></jsp:include>
 
@@ -58,8 +61,8 @@
                                         <td><%= obj.getId() %></td>
                                         <td><%= obj.getName() %></td>
                                         <td>
-                                            <a href="/admin/customers/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
-                                            <a href="/admin/customers/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
+                                            <a href="/admin/chefs/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
+                                            <a href="/admin/chefs/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
                                     </tbody>

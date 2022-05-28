@@ -88,7 +88,7 @@ public class MySqlChefModel implements ChefModel {
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
                 String description = resultSet.getString("description");
-                String thumbanail = resultSet.getString("thumbanail");
+                String thumbnail = resultSet.getString("thumbnail");
                 LocalDateTime createdAt =
                         LocalDateTime.ofInstant(resultSet.getTimestamp("createdAt").toInstant(), ZoneId.systemDefault());
                 LocalDateTime updatedAt =
@@ -98,7 +98,7 @@ public class MySqlChefModel implements ChefModel {
                 obj.setId(id);
                 obj.setName(name);
                 obj.setDescription(description);
-                obj.setThumbnail(thumbanail);
+                obj.setThumbnail(thumbnail);
                 obj.setCreatedAt(createdAt);
                 obj.setUpdatedAt(updatedAt);
                 obj.setStatus(ChefStatus.of(intStatus));

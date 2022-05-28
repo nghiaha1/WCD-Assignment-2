@@ -23,9 +23,8 @@ public class ListChefServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Chef> list = chefModel.findAll();
         req.setAttribute("title", "Chef Management");
-        req.setAttribute("list", list);
+        req.setAttribute("list", chefModel.findAll());
         req.getRequestDispatcher("/admin/chefs/list.jsp").forward(req, resp);
     }
 }

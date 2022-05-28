@@ -129,6 +129,15 @@
         <servlet-name>DeleteCategoryServlet</servlet-name>
         <url-pattern>/admin/categories/delete</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DetailCategoryServlet</servlet-name>
+        <servlet-class>com.ass.wcdassignment2.controller.category.DetailCategoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailCategoryServlet</servlet-name>
+        <url-pattern>/admin/categories/detail</url-pattern>
+    </servlet-mapping>
 <!--Chef-->
     <servlet>
         <servlet-name>CreateChefServlet</servlet-name>
@@ -164,5 +173,14 @@
     <servlet-mapping>
         <servlet-name>DeleteChefServlet</servlet-name>
         <url-pattern>/admin/chefs/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DetailChefServlet</servlet-name>
+        <servlet-class>com.ass.wcdassignment2.controller.chef.DetailChefServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailChefServlet</servlet-name>
+        <url-pattern>/admin/chefs/detail</url-pattern>
     </servlet-mapping>
 </web-app>

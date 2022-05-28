@@ -1,4 +1,4 @@
-package com.ass.wcdassignment2.controller.product;
+package com.ass.wcdassignment2.controller.category;
 
 import com.ass.wcdassignment2.entity.Category;
 import com.ass.wcdassignment2.entity.Product;
@@ -12,27 +12,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-public class DetailProductServlet extends HttpServlet {
+public class DetailCategoryServlet extends HttpServlet {
 
-    private ProductModel productModel;
+    private CategoryModel categoryModel;
 
-    public DetailProductServlet() {
-        this.productModel = new MySqlProductModel();
+    public DetailCategoryServlet() {
+        this.categoryModel = new MySqlCategoryModel();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
-        Product obj = productModel.findById(id);
+        Category obj = categoryModel.findById(id);
         if (obj == null) {
-            req.setAttribute("message", "Product not found!");
+            req.setAttribute("message", "Category not found!");
             req.getRequestDispatcher("/admin/errors/404.jsp").forward(req, resp);
         }else {
             req.setAttribute("obj", obj);
-            req.setAttribute("title", "Product's Detail");
-            req.getRequestDispatcher("/admin/products/detail.jsp").forward(req, resp);
+            req.setAttribute("title", "Category's Detail");
+            req.getRequestDispatcher("/admin/categories/detail.jsp").forward(req, resp);
         }
     }
 }

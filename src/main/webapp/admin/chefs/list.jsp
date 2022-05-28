@@ -75,9 +75,9 @@
                                         <td><%= obj.getCreatedAt() %></td>
                                         <td><%= obj.getUpdatedAt() %></td>
                                         <td>
-                                            <a href="/admin/categories/detail?id=<%= obj.getId() %>">Detail</a>&nbsp;&nbsp;
-                                            <a href="/admin/categories/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
-                                            <a href="/admin/categories/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
+                                            <a href="/admin/chefs/detail?id=<%= obj.getId() %>">Detail</a>&nbsp;&nbsp;
+                                            <a href="/admin/chefs/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
+                                            <a href="/admin/chefs/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
                                     <% } %>

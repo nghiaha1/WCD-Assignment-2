@@ -52,21 +52,27 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Thumbnail</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td><%= obj.getId() %></td>
                                         <td><%= obj.getName() %></td>
+                                        <td><%= obj.getDescription() %></td>
                                         <td>
-                                            <a href="/admin/customers/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
-                                            <a href="/admin/customers/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
+                                            <img src="<%= obj.getThumbnail() %>" alt="<%= obj.getName() %>" width="150px">
                                         </td>
+                                        <td><a href="/admin/chefs/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;</td>
+                                        <td><a href="/admin/chefs/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>&nbsp;</td>
                                     </tr>
                                     </tbody>
                                     <tfoot>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Thumbnail</th>
                                     </tfoot>
                                 </table>
                             </div>
