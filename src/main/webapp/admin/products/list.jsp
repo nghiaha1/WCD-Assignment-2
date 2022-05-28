@@ -4,8 +4,7 @@
 <%@ page import="com.ass.wcdassignment2.entity.Category" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    List<Product> list = (List<Product>)request.getAttribute("list");
-    List<Category> cList = (List<Category>) request.getAttribute("cList");
+    List<Product> list = (List<Product>) request.getAttribute("list");
     if (list == null) {
         list = new ArrayList<>();
     }

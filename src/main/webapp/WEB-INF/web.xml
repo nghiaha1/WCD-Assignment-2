@@ -39,7 +39,7 @@
         <servlet-name>AdninServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
-<!--Products-->
+<!--Product-->
     <servlet>
         <servlet-name>CreateProductServlet</servlet-name>
         <servlet-class>com.ass.wcdassignment2.controller.product.CreateProductServlet</servlet-class>
@@ -83,6 +83,15 @@
     <servlet-mapping>
         <servlet-name>DeleteProductServlet</servlet-name>
         <url-pattern>/admin/products/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DetailProductServlet</servlet-name>
+        <servlet-class>com.ass.wcdassignment2.controller.product.DetailProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailProductServlet</servlet-name>
+        <url-pattern>/admin/products/detail</url-pattern>
     </servlet-mapping>
 <!--Category-->
     <servlet>

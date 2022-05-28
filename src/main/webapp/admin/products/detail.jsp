@@ -2,6 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Product obj = (Product) request.getAttribute("obj");
+    if (obj == null) {
+        obj = new Product();
+    }
 %>
 <jsp:include page="/admin/includes/head.jsp"></jsp:include>
 
@@ -65,11 +68,13 @@
                                         <td><%= obj.getName() %></td>
                                         <td><%= obj.getDescription() %></td>
                                         <td><%= obj.getDetail() %></td>
-                                        <td><%= obj.getThumbnail() %></td>
+                                        <td>
+                                            <img class="img-bordered" src="<%= obj.getThumbnail() %>" alt="." width="150px">
+                                        </td>
                                         <td><%= obj.getPrice() %></td>
                                         <td>
-                                            <a href="/admin/customers/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
-                                            <a href="/admin/customers/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
+                                            <a href="/admin/products/edit?id=<%= obj.getId() %>">Edit</a>&nbsp;&nbsp;
+                                            <a href="/admin/products/delete?id=<%= obj.getId() %>" onclick="return confirm('Are you sure?')">Delete</a>
                                         </td>
                                     </tr>
                                     </tbody>
